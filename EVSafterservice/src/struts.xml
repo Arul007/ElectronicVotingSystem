@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtda/struts-2.0.dtd">
+
+<struts>
+
+<constant name="struts.custom.i18n.resources" value="ApplicationResources"/>
+<package name="default" extends="struts-default">
+
+
+<!-- ...............LOGIN LOGOUT CHANGE-PASSWORD REGISTER...................... -->
+
+<action name="login" class="com.wipro.evs.action.LoginAction" method="login">
+<result name="A">adminhomepage.jsp</result>
+<result name="E">electoralhomepage.jsp</result>
+<result name="V">voterhomepage.jsp</result>
+<result name="fail">login.jsp</result>
+<result name="invalid">login.jsp</result>
+<result name="input">login.jsp</result>
+<result name="changeAdmin">changePswdAdmin.jsp</result>
+<result name="changeEO">changePswdEO.jsp</result>
+</action>
+
+<action name="logout" class="com.wipro.evs.action.LogoutAction" method="logout">
+<result name="success">login.jsp</result>
+<result name="input">login.jsp</result>
+<result name="fail">error.jsp</result>
+</action>
+
+<action name="changePswdAdmin" class="com.wipro.evs.action.ChangePasswordAction" method="changePassword">
+<result name="success">adminhomepage.jsp</result>
+<result name="fail">adminErrorPage.jsp</result>
+<result name="invalid">adminFailPage.jsp</result>
+<result name="input">adminhomepage.jsp</result>
+</action>
+
+<action name="changePswdEO" class="com.wipro.evs.action.ChangePasswordAction" method="changePassword">
+<result name="success">electoralhomepage.jsp</result>
+<result name="fail">eoErrorPage.jsp</result>
+<result name="invalid">eoFailPage.jsp</result>
+<result name="input">electoralhomepage.jsp</result>
+</action>
+
+<action name="changePswdVoter" class="com.wipro.evs.action.ChangePasswordAction" method="changePassword">
+<result name="success">voterhomepage.jsp</result>
+<result name="fail">voterErrorPage.jsp</result>
+<result name="invalid">voterFailPage.jsp</result>
+<result name="input">voterhomepage.jsp</result>
+</action>
+
+<action name="registerAction" class="com.wipro.evs.action.RegisterAction" method="register">
+<result name="success">login.jsp</result>
+<result name="fail">error.jsp</result>
+<result name="invalid">error.jsp</result>
+<result name="input">login.jsp</result>
+</action>
+
+<!-- ....................ADD ELECTION,PARTY,CANDIDATE.............................. -->
+
+<action name="addElection" class="com.wipro.evs.action.AdminAction" method="addElection">
+<result name="success">adminhomepage.jsp</result>
+<result name="fail">adminFailPage.jsp</result>
+<result name="error">adminErrorPage.jsp</result>
+</action>
+
+<action name="addParty" class="com.wipro.evs.action.AdminAction" method="addParty">
+<result name="success">adminhomepage.jsp</result>
+<result name="fail">adminFailPage.jsp</result>
+<result name="error">adminErrorPage.jsp</result>
+</action>
+
+<action name="addCandidate" class="com.wipro.evs.action.AdminAction" method="addCandidate">
+<result name="success">adminhomepage.jsp</result>
+<result name="fail">adminFailPage.jsp</result>
+<result name="error">adminErrorPage.jsp</result>
+</action>
+
+<!--............................... VIEW ELECTION.................................. -->
+
+<action name="viewUpcomingElection" class="com.wipro.evs.action.AdminAction" method="viewAllUpcomingElections">
+<result name="success">viewUpcomingElection.jsp</result>
+<result name="fail">adminFailPage.jsp</result>
+<result name="error">adminErrorPage.jsp</result>
+</action>
+
+<action name="viewAllElection" class="com.wipro.evs.action.AdminAction" method="viewAllElections">
+<result name="success">viewAllElection.jsp</result>
+<result name="fail">adminFailPage.jsp</result>
+<result name="error">adminErrorPage.jsp</result>
+</action>
+
+<!-- .............................VIEW PARTY.......................................... -->
+
+<action name="viewAllParty" class="com.wipro.evs.action.AdminAction" method="viewAllParty">
+<result name="success">viewAllParty.jsp</result>
+<result name="fail">adminFailPage.jsp</result>
+<result name="error">adminErrorPage.jsp</result>
+</action>
+
+<!-- ............................VIEW CANDIDATE......................................... -->
+
+<action name="viewCandidateByElection" class="com.wipro.evs.action.AdminAction" method="viewCandidateByElection">
+<result name="success">viewCandidateByElection.jsp</result>
+<result name="fail">adminFailPage.jsp</result>
+<result name="error">adminErrorPage.jsp</result>
+</action>
+
+<action name="viewCandidateByParty" class="com.wipro.evs.action.AdminAction" method="viewCandidateByParty">
+<result name="success">viewCandidateByParty.jsp</result>
+<result name="fail">adminFailPage.jsp</result>
+<result name="error">adminErrorPage.jsp</result>
+</action>
+
+<action name="viewAllCandidate" class="com.wipro.evs.action.AdminAction" method="viewAllCandidate">
+<result name="success">viewAllCandidate.jsp</result>
+<result name="fail">adminFailPage.jsp</result>
+<result name="error">adminErrorPage.jsp</result>
+</action>
+<!--............................ MODIFY ELECTION......................................... -->
+
+<action name="viewAllElection1" class="com.wipro.evs.action.AdminAction" method="viewAllElections1">
+<result name="success">electionModify.jsp</result>
+<result name="fail">adminFailPage.jsp</result>
+<result name="error">adminErrorPage.jsp</result>
+</action>
+
+<action name="modifyElection" class="com.wipro.evs.action.AdminAction" method="modifyElection">
+<result name="success">adminhomepage.jsp</result>
+<result name="fail">adminFailPage.jsp</result>
+<result name="error">adminErrorPage.jsp</result>
+</action>
+
+<!-- ...........................DELETE ELECTION......................................... -->
+
+<action name="deleteElection" class="com.wipro.evs.action.AdminAction" method="deleteElection">
+<result name="success">adminhomepage.jsp</result>
+<result name="fail">adminFailPage.jsp</result>
+<result name="error">adminErrorPage.jsp</result>
+</action>
+
+<!-- ...........................MODIFY PARTY........................................... -->
+
+<action name="viewAllParty1" class="com.wipro.evs.action.AdminAction" method="viewAllParty1">
+<result name="success">partyModify.jsp</result>
+<result name="fail">adminFailPage.jsp</result>
+<result name="error">adminErrorPage.jsp</result>
+</action>
+
+<action name="modifyParty" class="com.wipro.evs.action.AdminAction" method="modifyParty">
+<result name="success">adminhomepage.jsp</result>
+<result name="fail">adminFailPage.jsp</result>
+<result name="error">adminErrorPage.jsp</result>
+</action>
+
+<!-- ...........................DELETE PARTY......................................... -->
+
+<action name="deleteParty" class="com.wipro.evs.action.AdminAction" method="deleteParty">
+<result name="success">adminhomepage.jsp</result>
+<result name="fail">adminFailPage.jsp</result>
+<result name="error">adminErrorPage.jsp</result>
+</action>
+
+<!-- ..........................MODIFY CANDIDATE...................................... -->
+
+<action name="viewAllCandidate1" class="com.wipro.evs.action.AdminAction" method="viewAllCandidate1">
+<result name="success">candidateModify.jsp</result>
+<result name="fail">adminFailPage.jsp</result>
+<result name="error">adminErrorPage.jsp</result>
+</action>
+
+<action name="modifyCandidate" class="com.wipro.evs.action.AdminAction" method="modifyCandidate">
+<result name="success">adminhomepage.jsp</result>
+<result name="fail">adminFailPage.jsp</result>
+<result name="error">adminErrorPage.jsp</result>
+</action>
+
+<!-- ...........................DELETE CANDIDATE..................................... -->
+
+<action name="deleteCandidate" class="com.wipro.evs.action.AdminAction" method="deleteCandidate">
+<result name="success">adminhomepage.jsp</result>
+<result name="fail">adminFailPage.jsp</result>
+<result name="error">adminErrorPage.jsp</result>
+</action>
+
+<!-- ..............................VOTER ACTIONS..................................... -->
+
+<action name="requestVoterID" class="com.wipro.evs.action.VoterAction" method="requestVoterID">
+<result name="success">voterhomepage.jsp</result>
+<result name="fail">voterFailPage.jsp</result>
+<result name="error">voterErrorPage.jsp</result>
+</action>
+
+<action name="viewListOfElections" class="com.wipro.evs.action.VoterAction" method="viewListOfElections">
+<result name="success">viewElectionsVoter.jsp</result>
+<result name="fail">voterFailPage.jsp</result>
+<result name="error">voterErrorPage.jsp</result>
+</action>
+
+<action name="viewCandidateByElectionVoter" class="com.wipro.evs.action.VoterAction" method="viewCandidateByElectionVoter">
+<result name="success">viewCandidateByElectionVoter.jsp</result>
+<result name="fail">voterFailPage.jsp</result>
+<result name="error">voterErrorPage.jsp</result>
+</action>
+
+<action name="viewGeneratedID" class="com.wipro.evs.action.VoterAction" method="viewGeneratedID">
+<result name="success">viewGeneratedID.jsp</result>
+<result name="fail">voterFailPage.jsp</result>
+<result name="error">voterErrorPage.jsp</result>
+</action>
+
+<action name="castVote" class="com.wipro.evs.action.VoterAction" method="castVote">
+<result name="success">votingPage.jsp</result>
+<result name="fail">voterFailPage.jsp</result>
+<result name="fail1">voterFailPage.jsp</result>
+<result name="error">voterErrorPage.jsp</result>
+</action>
+
+<action name="castVote1" class="com.wipro.evs.action.VoterAction" method="castVote">
+<result name="success">votingPageEO.jsp</result>
+<result name="fail">eoFailPage.jsp</result>
+<result name="fail1">eoFailPage.jsp</result>
+<result name="error">eoErrorPage.jsp</result>
+</action>
+
+<action name="castVote2" class="com.wipro.evs.action.VoterAction" method="castVote">
+<result name="success">votingPageAdmin.jsp</result>
+<result name="fail">adminFailPage.jsp</result>
+<result name="fail1">adminFailPage.jsp</result>
+<result name="error">adminErrorPage.jsp</result>
+</action>
+
+<action name="voting" class="com.wipro.evs.action.VoterAction" method="voting">
+<result name="success">votingPage.jsp</result>
+<result name="fail">voterFailPage.jsp</result>
+<result name="error">voterErrorPage.jsp</result>
+</action>
+
+<action name="voting1" class="com.wipro.evs.action.VoterAction" method="voting">
+<result name="success">votingPageAdmin.jsp</result>
+<result name="fail">adminFailPage.jsp</result>
+<result name="error">adminErrorPage.jsp</result>
+</action>
+
+<action name="voting2" class="com.wipro.evs.action.VoterAction" method="voting">
+<result name="success">votingPageEO.jsp</result>
+<result name="fail">eoFailPage.jsp</result>
+<result name="error">eoErrorPage.jsp</result>
+</action>
+
+<action name="vote1" class="com.wipro.evs.action.VoterAction" method="vote">
+<result name="success">adminhomepage.jsp</result>
+<result name="fail">adminFailPage.jsp</result>
+<result name="error">adminErrorPage.jsp</result>
+</action>
+<action name="vote2" class="com.wipro.evs.action.VoterAction" method="vote">
+<result name="success">electoralhomepage.jsp</result>
+<result name="fail">eoFailPage.jsp</result>
+<result name="error">eoErrorPage.jsp</result>
+</action>
+
+<action name="vote" class="com.wipro.evs.action.VoterAction" method="vote">
+<result name="success">voterhomepage.jsp</result>
+<result name="fail">voterFailPage.jsp</result>
+<result name="error">voterErrorPage.jsp</result>
+</action>
+
+<action name="electionresult" class="com.wipro.evs.action.VoterAction" method="electionResult">
+<result name="success">electionResult.jsp</result>
+<result name="fail">voterFailPage.jsp</result>
+<result name="error">voterErrorPage.jsp</result>
+</action>
+
+<!-- .................................IMPORTANT ADMIN ACTION................................................... -->
+
+<action name="viewAllAdminPendingApplication" class="com.wipro.evs.action.ImpAdminAction" method="viewAllAdminPendingApplication">
+<result name="success">viewAllAdminPendingApplication.jsp</result>
+<result name="fail">adminFailPage.jsp</result>
+<result name="error">adminErrorPage.jsp</result>
+</action>
+
+
+<action name="forwardRequest" class="com.wipro.evs.action.ImpAdminAction" method="forwardRequest">
+<result name="success" type="chain">viewAllAdminPendingApplication</result>
+<result name="fail">adminFailPage.jsp</result>
+<result name="error">adminErrorPage.jsp</result>
+</action>
+
+<action name="approveResult" class="com.wipro.evs.action.ImpAdminAction" method="approveResult">
+<result name="success">approveResult.jsp</result>
+<result name="fail">adminFailPage.jsp</result>
+<result name="error">adminErrorPage.jsp</result>
+</action>
+
+<!-- ..................................EO ACTION........................................... -->
+
+<action name="viewAllPendingEO" class="com.wipro.evs.action.EOAction" method="viewAllPendingEO">
+<result name="success">viewAllPendingEO.jsp</result>
+<result name="fail">eoFailPage.jsp</result>
+<result name="error">eoErrorPage.jsp</result>
+</action>
+
+<action name="rejectRequest" class="com.wipro.evs.action.EOAction" method="rejectRequest">
+<result name="success" type="chain">viewAllPendingEO</result>
+<result name="fail">eoFailPage.jsp</result>
+<result name="error">eoErrorPage.jsp</result>
+</action>
+
+<action name="approveRequest" class="com.wipro.evs.action.EOAction" method="approveRequest">
+<result name="success" type="chain">viewAllPendingEO</result>
+<result name="fail">eoFailPage.jsp</result>
+<result name="error">eoErrorPage.jsp</result>
+</action>
+
+</package>
+</struts>

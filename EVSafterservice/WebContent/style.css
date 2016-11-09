@@ -1,0 +1,179 @@
+@CHARSET "ISO-8859-1";
+
+/* _____________________Header__________________  */
+.header {
+	background: #8CC739;
+	height: 80px;
+}
+
+.header1 {
+	background:yellow;
+	color:blue;
+	text-align:right;
+	height:20px;
+}
+
+
+
+/* _____________________LOGIN__________________  */
+.loginBox {
+	margin: 50px 0px 100px 0px;
+	width: 400px;
+	position: relative;
+	float: right;
+}
+
+/* _____________________Login__________________  */
+body 
+{
+	
+	font:"Lucida Grande", Tahoma, Verdana, sans-serif;
+	background:cornsilk;
+	
+}
+
+/*_______________________Footer____________________  */
+
+/*.footer
+{
+    background:yellow;
+
+	text-align: center;
+	margin: 200px 0px 0px 0px;
+	clear: right;
+	
+}*/
+
+
+
+
+
+
+
+/* ___________________LoginBox___________________________ */
+
+.login
+ {
+
+	position: relative;
+	margin: 50px auto 50px;
+	/*margin: 100px 50px 50px 50px;*/
+	padding: 20px 20px 20px;
+	width: 310px;
+	background: tan;
+	border-radius: 3px;
+	position: relative;
+}
+
+
+/*----------------------------------------------------------------------*/
+
+
+#details {
+	background-color: blue;
+	color: #80ff00;
+	text-align: right;
+	height: 20px;
+	padding: 5px;
+}
+
+#nav {
+	line-height: 30px;
+	background-color: #808040;
+	table-layout: fixed;
+	height: 500px;
+	width: 406px;
+	float: right;
+	padding: 5px;
+}
+
+#section {
+	width: 597px;
+	height: 511px;
+	float: left;
+	padding: 0px;
+}
+
+a:LINK
+{
+	text-decoration:underline;
+	text-decoration:blink;
+}
+#menu
+{
+	width:200px;
+	font-size:16px;
+	
+}
+#display_menu{
+	list-style-type: none;
+	padding:5px 5px 5px 5px;
+}
+.menu_link_name{
+	padding:5px 5px 5px 5px;
+	text-align: center;
+	
+
+}
+.menu_link{
+	text-decoration: none;
+	color: skyblue;
+}
+.menu_link:HOVER {
+	text-decoration: none;
+	color: green;
+}
+#wrapper {
+	   
+}
+.wrapper1{
+	 background-color: #fafad2;
+}
+.rightcolumn1{
+	position:relative;
+	width:600px;
+	padding: 40px 10px 10px 30px;
+	height: 480px;
+	 min-height: 342px;
+}
+.leftcolumn{
+   width:220px;
+}
+#leftcolumn, #rightcolumn {
+    border: 1px solid #ccc;
+    float: left;
+    border-radius:3px;
+}
+
+#rightcolumn {
+    
+     height: 430px;
+     width:700px;
+      margin:5px;
+ }
+ 
+#leftcolumn {
+     width: 220px;
+     height: 480px;
+     margin:5px;
+    
+ }
+ 
+ .tableclass {
+    position:inherit;
+ 	width: 70%;
+ 	
+ }
+ 
+  .tableclass td, th {
+  	background-color:aqua;
+ 	padding: 0px;
+ }
+ .tableclass input[type=text] {
+ 	width: 50px;
+ }
+
+
+
+
+

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC 
+  		"-//OpenSymphony Group//XWork Validator 1.0.2//EN" 
+  		"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+<validators>
+	<field name="profileBean.firstName">
+		<field-validator type="requiredstring">
+			<message>First Name cant be blank</message>
+		</field-validator>
+		<field-validator type="regex">
+			<param name="expression">^\w{2,20}$</param>
+			<message>The name must be greater than 2</message>
+		</field-validator>
+	</field>
+	<field name="profileBean.lastName">
+		<field-validator type="requiredstring">
+			<message>Last Name cant be blank</message>
+		</field-validator>
+	</field>
+	<field name="profileBean.dateOfBirth">
+		<field-validator type="requiredstring">
+			<message>Date of birth cant be blank</message>
+		</field-validator>
+	
+	</field>
+	<field name="profileBean.street">
+		<field-validator type="requiredstring">
+			<message>Street cant be blank</message>
+		</field-validator>
+	</field>
+	<field name="profileBean.location">
+		<field-validator type="requiredstring">
+			<message>Location cant be blank</message>
+		</field-validator>
+	</field>
+	<field name="profileBean.city">
+		<field-validator type="requiredstring">
+			<message>City cant be blank</message>
+		</field-validator>
+	</field>
+	<field name="profileBean.state">
+		<field-validator type="requiredstring">
+			<message>State cant be blank</message>
+		</field-validator>
+	</field>
+	<field name="profileBean.pincode">
+		<field-validator type="requiredstring">
+			<message>Pincode cant be blank</message>
+		</field-validator>
+	</field>
+	<field name="profileBean.mobileNo">
+		<field-validator type="requiredstring">
+			<message>Mobile No.cant be blank</message>
+		</field-validator>
+		<field-validator type="regex">
+			<param name="expression">[0-9]{10}</param>
+			<message>Mobile number should be 10 digit long</message>
+		</field-validator>
+	</field>
+	<field name="profileBean.emailID">
+		<field-validator type="requiredstring">
+			<message>Email cant be blank</message>
+		</field-validator>
+		<field-validator type="email">
+			<message>Invalid format</message>
+		</field-validator>
+	</field>
+	<field name="profileBean.password">
+		<field-validator type="requiredstring">
+			<message>Password cant be blank</message>
+		</field-validator>
+	</field>
+	
+</validators>
